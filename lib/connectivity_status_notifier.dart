@@ -6,7 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 enum ConnectivityStatus { notDetermined, isConnected, isDisonnected }
 
 class ConnectivityStatusNotifier extends StateNotifier<ConnectivityStatus> {
-  StreamController<ConnectivityResult> controller = StreamController<ConnectivityResult>();
+  // StreamController<ConnectivityResult> controller = StreamController<ConnectivityResult>();
 
   ConnectivityStatus? lastResult;
   ConnectivityStatus? newState;
