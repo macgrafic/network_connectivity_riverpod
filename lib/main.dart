@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:network_connectivity_riverpod/home_screen.dart';
 
 void main() {
-  runApp(ProviderScope(child: NetworkConnectivity()));
+  runApp(const ProviderScope(child: NetworkConnectivity()));
 }
 
 class NetworkConnectivity extends StatelessWidget {
@@ -11,7 +11,7 @@ class NetworkConnectivity extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: HomeScreen(),
     );
   }
