@@ -3,11 +3,10 @@ import 'dart:async';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-enum ConnectivityStatus { NotDetermined, isConnected, isDisonnected }
+enum ConnectivityStatus { notDetermined, isConnected, isDisonnected }
 
 class ConnectivityStatusNotifier extends StateNotifier<ConnectivityStatus> {
-  StreamController<ConnectivityResult> controller =
-      StreamController<ConnectivityResult>();
+  StreamController<ConnectivityResult> controller = StreamController<ConnectivityResult>();
 
   ConnectivityStatus? lastResult;
   ConnectivityStatus? newState;
@@ -18,9 +17,13 @@ class ConnectivityStatusNotifier extends StateNotifier<ConnectivityStatus> {
     } else {
       lastResult = ConnectivityStatus.isDisonnected;
     }
-    lastResult = ConnectivityStatus.NotDetermined;
+    lastResult = ConnectivityStatus.notDetermined;
     Connectivity().onConnectivityChanged.listen((ConnectivityResult result) {
       switch (result) {
+        case ConnectivityResult.bluetooth:
+        case ConnectivityResult.ethernet:
+        case ConnectivityResult.vpn:
+        case ConnectivityResult.other:
         case ConnectivityResult.mobile:
         case ConnectivityResult.wifi:
           newState = ConnectivityStatus.isConnected;
