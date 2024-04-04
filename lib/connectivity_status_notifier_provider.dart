@@ -9,7 +9,6 @@ enum ConnectivityStatus { notDetermined, isConnected, isDisonnected }
 class ConnectivityStatusNotifier extends _$ConnectivityStatusNotifier {
   @override
   ConnectivityStatus build() {
-    state = ConnectivityStatus.notDetermined;
     updateConnection();
     return ConnectivityStatus.isConnected;
   }
