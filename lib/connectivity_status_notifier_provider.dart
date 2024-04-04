@@ -1,7 +1,7 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'connectivity_status_provider.g.dart';
+part 'connectivity_status_notifier_provider.g.dart';
 
 enum ConnectivityStatus { notDetermined, isConnected, isDisonnected }
 

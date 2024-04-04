@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 // import 'package:network_connectivity_riverpod/connectivity_status_notifier.dart';
-import 'package:network_connectivity_riverpod/connectivity_status_provider.dart';
+import 'package:network_connectivity_riverpod/connectivity_status_notifier_provider.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
